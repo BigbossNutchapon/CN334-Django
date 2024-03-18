@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from ecommerce import views as ecom_views
 
 
@@ -28,4 +28,6 @@ urlpatterns = [
     path("ecommerce/contact/", ecom_views.ecommerce_contact_view),
     path("ecommerce/product/", ecom_views.ecommerce_product_view),
     path("ecommerce/checkout/", ecom_views.ecommerce_checkout_view),
+    path("w09/request", ecom_views.basic_request),
+    path("w09/tokenize", ecom_views.tokenize),
 ]
